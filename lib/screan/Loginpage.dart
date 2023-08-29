@@ -3,12 +3,10 @@ import 'package:flutter/material.dart';
 
 import 'home.dart';
 
-
 class LoginPage_SignupPage extends StatefulWidget {
   @override
   _LoginPage_SignupPageState createState() => _LoginPage_SignupPageState();
 }
-
 
 class _LoginPage_SignupPageState extends State<LoginPage_SignupPage> {
   final TextEditingController _emailController = TextEditingController();
@@ -23,7 +21,8 @@ class _LoginPage_SignupPageState extends State<LoginPage_SignupPage> {
   void _validateInputs() async {
     setState(() {
       _emailError = _emailController.text.isEmpty ? 'Email is required' : null;
-      _passwordError = _passwordController.text.isEmpty ? 'Password is required' : null;
+      _passwordError =
+          _passwordController.text.isEmpty ? 'Password is required' : null;
     });
 
     if (_emailError == null && _passwordError == null) {
@@ -39,7 +38,8 @@ class _LoginPage_SignupPageState extends State<LoginPage_SignupPage> {
 
       if (_emailError == null && _passwordError == null) {
         // Route the page to Home page
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Home()));
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => Home()));
       }
     }
   }
@@ -73,14 +73,16 @@ class _LoginPage_SignupPageState extends State<LoginPage_SignupPage> {
         _isLoading = true;
       });
 
-      final credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+      final credential =
+          await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: _emailController.text,
         password: _passwordController.text,
       );
 
       if (credential.user != null) {
         // Route the page to Home page
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Home()));
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => Home()));
       }
     } catch (e) {
       print(e);
@@ -90,7 +92,6 @@ class _LoginPage_SignupPageState extends State<LoginPage_SignupPage> {
       });
     }
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -129,7 +130,8 @@ class _LoginPage_SignupPageState extends State<LoginPage_SignupPage> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10), // Rounded corners
                 ),
-                minimumSize: Size(double.infinity, 50), // Custom width and height
+                minimumSize:
+                    Size(double.infinity, 50), // Custom width and height
               ),
             ),
             if (_isLoading)
@@ -140,9 +142,7 @@ class _LoginPage_SignupPageState extends State<LoginPage_SignupPage> {
                   ),
                 ),
               ),
-
             SizedBox(height: 24),
-
             ElevatedButton(
               onPressed: _isLoading ? null : createUserWithEmailAndPassword,
               child: Text('Sign Up'),
@@ -152,7 +152,8 @@ class _LoginPage_SignupPageState extends State<LoginPage_SignupPage> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10), // Rounded corners
                 ),
-                minimumSize: Size(double.infinity, 50), // Custom width and height
+                minimumSize:
+                    Size(double.infinity, 50), // Custom width and height
               ),
             ),
           ],
