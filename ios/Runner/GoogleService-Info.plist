@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>251241889905-ioffi9qnmj3vp7q7oma3qc3ue9n1r4em.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.251241889905-ioffi9qnmj3vp7q7oma3qc3ue9n1r4em</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBCFHu5ZBX0Hi79rbOscwYI3UCFwHOY86I</string>
+	<key>GCM_SENDER_ID</key>
+	<string>251241889905</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.loginSignupApp</string>
+	<key>PROJECT_ID</key>
+	<string>insert-read-update-database</string>
+	<key>STORAGE_BUCKET</key>
+	<string>insert-read-update-database.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:251241889905:ios:dbb3865c2c9bba597e1bd0</string>
+	<key>DATABASE_URL</key>
+	<string>https://insert-read-update-database-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+</dict>
+</plist>
